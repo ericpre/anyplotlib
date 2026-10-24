@@ -1,0 +1,1546 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Changelog &#8212; anyplotlib 0.11.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/anywidget_overlay.css?v=a271c467" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6a9e09cd" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=f3b36f1a"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="_static/anywidget_config.js?v=cd5adc06"></script>
+    <script src="_static/sg-tags.js?v=d80f6fa4"></script>
+    <script defer="defer" src="_static/anywidget_bridge.js?v=a2d47ea1"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'changelog';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://cssfrancis.github.io/anyplotlib/dev/changelog.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Benchmarking" href="dev/benchmarking.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/anyplotlib.svg" class="logo__image only-light" alt=""/>
+    <img src="_static/anyplotlib.svg" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">anyplotlib</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="user_guide/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="auto_examples/index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="dev/index.html">
+    Contribute
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Releases
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/CSSFrancis/anyplotlib" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="user_guide/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="auto_examples/index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="dev/index.html">
+    Contribute
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Releases
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/CSSFrancis/anyplotlib" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar"><svg class="pst-icon svg-inline--fa" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Changelog</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
+<p>All notable changes to <strong>anyplotlib</strong> are documented here.</p>
+<p>Fragment files in <code class="docutils literal notranslate"><span class="pre">upcoming_changes/</span></code> are assembled into this file by
+<a class="reference external" href="https://towncrier.readthedocs.io/">towncrier</a> when a release is prepared
+(see <code class="docutils literal notranslate"><span class="pre">upcoming_changes/README.rst</span></code> for contributor instructions).</p>
+<section id="id1">
+<h2>0.11.0 (2026-10-23)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="api-and-behaviour-changes">
+<h3>API and Behaviour Changes<a class="headerlink" href="#api-and-behaviour-changes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Changed 3-D panels created with <code class="docutils literal notranslate"><span class="pre">elevation=0</span></code> to render at 0 degrees; they were previously drawn as if the elevation were 30 degrees. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/80">#80</a>)</p></li>
+<li><p><a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.get_axes" title="anyplotlib.Figure.get_axes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Figure.get_axes</span></code></a> now lists every grid
+axes the figure created, including ones with no plot attached yet, as
+matplotlib does — so <code class="docutils literal notranslate"><span class="pre">fig,</span> <span class="pre">ax</span> <span class="pre">=</span> <span class="pre">apl.subplots(1,</span> <span class="pre">1);</span> <span class="pre">fig.get_axes()[0]</span> <span class="pre">is</span> <span class="pre">ax</span></code>.
+Floating insets are still not listed.</p></li>
+</ul>
+</section>
+<section id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Added <a class="reference internal" href="api/generated/anyplotlib.Plot3D.html#anyplotlib.Plot3D.set_rotation" title="anyplotlib.Plot3D.set_rotation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_rotation()</span></code></a> and <a class="reference internal" href="api/generated/anyplotlib.Plot3D.html#anyplotlib.Plot3D.set_drag_mode" title="anyplotlib.Plot3D.set_drag_mode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_drag_mode()</span></code></a> to turn 3-D data to any orientation independently of the camera, by code or by dragging, with the result readable from <a class="reference internal" href="api/generated/anyplotlib.Plot3D.html#anyplotlib.Plot3D.rotation" title="anyplotlib.Plot3D.rotation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">rotation</span></code></a> and <code class="docutils literal notranslate"><span class="pre">event.rotation</span></code>. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/80">#80</a>)</p></li>
+<li><p>Added <a class="reference internal" href="api/generated/anyplotlib.Plot3D.html#anyplotlib.Plot3D.add_patch" title="anyplotlib.Plot3D.add_patch"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_patch()</span></code></a> to draw filled regions and paths on 3-D panels, with edges along great circles, the far side dimmed, and a choice of turning with the data or staying fixed while it rotates. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/81">#81</a>)</p></li>
+<li><p>Added <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.transform" title="anyplotlib.Plot2D.transform"><code class="xref py py-attr docutils literal notranslate"><span class="pre">transform</span></code></a> (an <code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTransform</span></code>),
+<a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.data_to_pixel" title="anyplotlib.Plot2D.data_to_pixel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">data_to_pixel()</span></code></a>, <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.pixel_to_data" title="anyplotlib.Plot2D.pixel_to_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pixel_to_data()</span></code></a>
+and read-only <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.x_axis" title="anyplotlib.Plot2D.x_axis"><code class="xref py py-attr docutils literal notranslate"><span class="pre">x_axis</span></code></a> / <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.y_axis" title="anyplotlib.Plot2D.y_axis"><code class="xref py py-attr docutils literal notranslate"><span class="pre">y_axis</span></code></a>
+for converting between calibrated data units and the image-pixel coordinates
+that 2-D widgets and markers use, including offset, non-unit, descending and
+non-uniform axes.</p></li>
+<li><p>Added <a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.set_xlabel" title="anyplotlib.Axes.set_xlabel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Axes.set_xlabel</span></code></a>,
+<a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.set_ylabel" title="anyplotlib.Axes.set_ylabel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_ylabel()</span></code></a> and <a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.set_title" title="anyplotlib.Axes.set_title"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_title()</span></code></a>,
+which work before a plot is attached: the axes keeps the labels and applies
+them to the plot that is attached first and to any plot that later replaces
+it (a second <code class="docutils literal notranslate"><span class="pre">imshow</span></code>/<code class="docutils literal notranslate"><span class="pre">plot</span></code>/… call on the same axes).</p></li>
+<li><p>Added <a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.on_close" title="anyplotlib.Figure.on_close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Figure.on_close</span></code></a>, the
+<a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.closed" title="anyplotlib.Figure.closed"><code class="xref py py-attr docutils literal notranslate"><span class="pre">closed</span></code></a> and <a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.displayed" title="anyplotlib.Figure.displayed"><code class="xref py py-attr docutils literal notranslate"><span class="pre">displayed</span></code></a>
+flags and an idempotent <a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.display" title="anyplotlib.Figure.display"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Figure.display</span></code></a>;
+<a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.close" title="anyplotlib.Figure.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> now also fires <code class="docutils literal notranslate"><span class="pre">close</span></code> on the figure’s own
+callbacks (before the panels’), and still hides the figure if a handler raises.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">coords=&quot;data&quot;</span></code> to every <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D" title="anyplotlib.Plot2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">Plot2D</span></code></a> <code class="docutils literal notranslate"><span class="pre">add_*_widget</span></code>
+method (and <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.add_widget" title="anyplotlib.Plot2D.add_widget"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_widget()</span></code></a>): the widget then takes and
+reports its geometry — attribute reads, <a class="reference internal" href="api/generated/anyplotlib.Widget.html#anyplotlib.Widget.get" title="anyplotlib.Widget.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code></a>,
+<a class="reference internal" href="api/generated/anyplotlib.Widget.html#anyplotlib.Widget.to_dict" title="anyplotlib.Widget.to_dict"><code class="xref py py-meth docutils literal notranslate"><span class="pre">to_dict()</span></code></a>, <a class="reference internal" href="api/generated/anyplotlib.Widget.html#anyplotlib.Widget.set" title="anyplotlib.Widget.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code></a> and so the
+values seen in drag callbacks — in the panel’s calibrated axis units instead
+of image pixels.  See <a class="reference internal" href="api/generated/anyplotlib.Widget.html#anyplotlib.Widget.coords" title="anyplotlib.Widget.coords"><code class="xref py py-attr docutils literal notranslate"><span class="pre">coords</span></code></a> and
+<a class="reference internal" href="api/generated/anyplotlib.Widget.html#anyplotlib.Widget.set_coords" title="anyplotlib.Widget.set_coords"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_coords()</span></code></a>; 1-D and bar widget methods accept
+<code class="docutils literal notranslate"><span class="pre">coords=&quot;data&quot;</span></code> too.
+A data-coordinate rectangle spans <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">w]</span> <span class="pre">×</span> <span class="pre">[y,</span> <span class="pre">y</span> <span class="pre">+</span> <span class="pre">h]</span></code> in data, with
+<code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> its corner of smallest data x and y and positive <code class="docutils literal notranslate"><span class="pre">w</span></code>, <code class="docutils literal notranslate"><span class="pre">h</span></code>, so it
+covers the right pixels with <code class="docutils literal notranslate"><span class="pre">origin=&quot;lower&quot;</span></code> or a descending axis.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">coords=&quot;data&quot;</span></code> to the <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D" title="anyplotlib.Plot2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">Plot2D</span></code></a> marker methods and
+<a class="reference internal" href="api/generated/anyplotlib.markers.MarkerRegistry.html#anyplotlib.markers.MarkerRegistry.add" title="anyplotlib.markers.MarkerRegistry.add"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MarkerRegistry.add</span></code></a>: positions
+and data-sized lengths are then given in the panel’s calibrated axis units
+and converted to image pixels on every render, so the markers follow
+<a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.set_extent" title="anyplotlib.Plot2D.set_extent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_extent()</span></code></a>.  See
+<a class="reference internal" href="api/generated/anyplotlib.markers.MarkerGroup.html#anyplotlib.markers.MarkerGroup.coords" title="anyplotlib.markers.MarkerGroup.coords"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MarkerGroup.coords</span></code></a>.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">extent=(left,</span> <span class="pre">right,</span> <span class="pre">bottom,</span> <span class="pre">top)</span></code> to <a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.imshow" title="anyplotlib.Axes.imshow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Axes.imshow</span></code></a> and <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.set_extent_edges" title="anyplotlib.Plot2D.set_extent_edges"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Plot2D.set_extent_edges</span></code></a>, which calibrate an image from its
+outer edges the way matplotlib’s <code class="docutils literal notranslate"><span class="pre">imshow(extent=...)</span></code> does.</p></li>
+<li><p>Added a public <code class="docutils literal notranslate"><span class="pre">notify</span></code> keyword to <a class="reference internal" href="api/generated/anyplotlib.Widget.html#anyplotlib.Widget.set" title="anyplotlib.Widget.set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code></a>
+(<code class="docutils literal notranslate"><span class="pre">widget.set(x=...,</span> <span class="pre">notify=False)</span></code>) to move a widget from Python without
+firing its <code class="docutils literal notranslate"><span class="pre">pointer_move</span></code> handlers; <code class="docutils literal notranslate"><span class="pre">_notify</span></code> remains as an alias.</p></li>
+<li><p>Added read-only <a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.figure" title="anyplotlib.Axes.figure"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Axes.figure</span></code></a>,
+<a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.primary_plot" title="anyplotlib.Axes.primary_plot"><code class="xref py py-attr docutils literal notranslate"><span class="pre">primary_plot</span></code></a>, <a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.plots" title="anyplotlib.Axes.plots"><code class="xref py py-attr docutils literal notranslate"><span class="pre">plots</span></code></a>,
+<a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.image_plot" title="anyplotlib.Axes.image_plot"><code class="xref py py-attr docutils literal notranslate"><span class="pre">image_plot</span></code></a> and <a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.has_plot" title="anyplotlib.Axes.has_plot"><code class="xref py py-attr docutils literal notranslate"><span class="pre">has_plot</span></code></a> so
+code holding an axes can reach its figure and plot without private attributes.</p></li>
+<li><p>Added read-only <a class="reference internal" href="api/generated/anyplotlib.markers.MarkerGroup.html#anyplotlib.markers.MarkerGroup.marker_type" title="anyplotlib.markers.MarkerGroup.marker_type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">MarkerGroup.marker_type</span></code></a> and
+<a class="reference internal" href="api/generated/anyplotlib.markers.MarkerGroup.html#anyplotlib.markers.MarkerGroup.name" title="anyplotlib.markers.MarkerGroup.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a>, and
+<a class="reference internal" href="api/generated/anyplotlib.markers.MarkerGroup.html#anyplotlib.markers.MarkerGroup.get" title="anyplotlib.markers.MarkerGroup.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MarkerGroup.get</span></code></a> for reading a
+group’s properties back.</p></li>
+<li><p>Added read-only <a class="reference internal" href="api/generated/anyplotlib.Widget.html#anyplotlib.Widget.plot" title="anyplotlib.Widget.plot"><code class="xref py py-attr docutils literal notranslate"><span class="pre">plot</span></code></a> (the owning plot, <code class="docutils literal notranslate"><span class="pre">None</span></code>
+once removed) and <a class="reference internal" href="api/generated/anyplotlib.Widget.html#anyplotlib.Widget.kind" title="anyplotlib.Widget.kind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kind</span></code></a> (<code class="docutils literal notranslate"><span class="pre">&quot;rectangle&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;vline&quot;</span></code>, …) so code holding only a widget handle can find its plot and
+type without private attributes.</p></li>
+<li><p>Added rotation, anchor alignment and <code class="docutils literal notranslate"><span class="pre">$...$</span></code> TeX typesetting to <code class="docutils literal notranslate"><span class="pre">texts</span></code>
+markers (wire fields <code class="docutils literal notranslate"><span class="pre">rotation</span></code> in radians, <code class="docutils literal notranslate"><span class="pre">halign</span></code>, <code class="docutils literal notranslate"><span class="pre">valign</span></code>):
+labels anchor at their offset point, rotate counter-clockwise like
+matplotlib’s, and math markup renders through the existing axis-label TeX
+engine instead of showing raw dollars.</p></li>
+<li><p>Marker kwargs now accept a length-1 sequence wherever a scalar is accepted
+(<code class="docutils literal notranslate"><span class="pre">radius=[5]</span></code>, <code class="docutils literal notranslate"><span class="pre">linewidths=(1.5,)</span></code>, <code class="docutils literal notranslate"><span class="pre">edgecolors=[&quot;#f00&quot;]</span></code>), broadcasting
+it across the group as matplotlib’s property cycling does.</p></li>
+</ul>
+</section>
+<section id="bug-fixes">
+<h3>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.close" title="anyplotlib.Figure.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Figure.close</span></code></a> now also closes the
+underlying ipywidgets comm (removing the figure’s front-end views) and drops
+it from ipywidgets’ instance registry, so a closed figure that is no longer
+referenced — and its plot data — can be garbage collected.  Previously every
+figure stayed alive for the life of the process.</p></li>
+<li><p><a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.close" title="anyplotlib.Figure.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Figure.close</span></code></a> now runs the figure-level and
+each panel’s <code class="docutils literal notranslate"><span class="pre">close</span></code> handlers independently: a handler that raises no
+longer skips the remaining ones.  The figure is still marked closed and
+hidden, and the first exception is re-raised once all handlers have run.</p></li>
+<li><p>A widget’s <code class="docutils literal notranslate"><span class="pre">repr</span></code> now shows its geometry in the widget’s own
+<a class="reference internal" href="api/generated/anyplotlib.Widget.html#anyplotlib.Widget.coords" title="anyplotlib.Widget.coords"><code class="xref py py-attr docutils literal notranslate"><span class="pre">coords</span></code></a> frame (and says <code class="docutils literal notranslate"><span class="pre">coords='data'</span></code> for a
+data-coordinate widget on a 2-D panel) instead of the image pixels stored for
+the renderer.</p></li>
+<li><p>Fixed <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_event_handler()</span></code> raising
+<code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> for bound methods, and made <code class="docutils literal notranslate"><span class="pre">remove_handler(obj.method)</span></code>
+find a handler registered as <code class="docutils literal notranslate"><span class="pre">obj.method</span></code>.</p></li>
+<li><p>Fixed empty marker groups (<code class="docutils literal notranslate"><span class="pre">offsets=np.zeros((0,</span> <span class="pre">2))</span></code>) raising
+<code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">offsets</span> <span class="pre">must</span> <span class="pre">be</span> <span class="pre">shape</span> <span class="pre">(N,</span> <span class="pre">2)</span></code> when created or updated with
+<code class="docutils literal notranslate"><span class="pre">coords=&quot;data&quot;</span></code>; an empty <code class="docutils literal notranslate"><span class="pre">offsets=[]</span></code> is now accepted in either frame.</p></li>
+</ul>
+</section>
+<section id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Added a <em>Fonts and Labels</em> gallery example covering text-marker size,
+weight, outline, rotation, alignment and <code class="docutils literal notranslate"><span class="pre">$...$</span></code> math, alongside the
+panel’s own title and axis labels.</p></li>
+<li><p>Documented that after <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.set_extent" title="anyplotlib.Plot2D.set_extent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_extent()</span></code></a> a
+<code class="docutils literal notranslate"><span class="pre">coords=&quot;data&quot;</span></code> widget stays on the same pixels (its data values change)
+while a <code class="docutils literal notranslate"><span class="pre">coords=&quot;data&quot;</span></code> marker group keeps its data position.</p></li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2>0.10.1 (2026-09-17)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h3>New Features<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>A page embedding a figure in an iframe can post <code class="docutils literal notranslate"><span class="pre">{type:</span> <span class="pre">'anyplotlib_host',</span> <span class="pre">savesPng:</span> <span class="pre">true}</span></code> to say it saves exported PNGs itself; the figure’s “Save PNG…” then only sends the image to the host, without the in-figure “Save image as…” preview or the “Save as… (choose folder)” entry. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/78">#78</a>)</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Bug Fixes<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Zooming or panning a coordinate axis no longer blanks an <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_raster()</span></code> image, and every marker drawn after it, until the next update from Python. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/76">#76</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id10">
+<h2>0.10.0 (2026-09-14)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h3>API and Behaviour Changes<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>2-D pointer events (<code class="docutils literal notranslate"><span class="pre">pointer_down</span></code>, <code class="docutils literal notranslate"><span class="pre">double_click</span></code>, <code class="docutils literal notranslate"><span class="pre">pointer_settled</span></code>, <code class="docutils literal notranslate"><span class="pre">key_down</span></code>) and the hover readout now report <code class="docutils literal notranslate"><span class="pre">img_x</span></code>/<code class="docutils literal notranslate"><span class="pre">img_y</span></code> in the pixel-centre convention that markers, widgets and <code class="xref py py-meth docutils literal notranslate"><span class="pre">display_to_data()</span></code> already used — they read half a pixel right and down before — so <code class="docutils literal notranslate"><span class="pre">round(event.img_x)</span></code> names the clicked pixel (<code class="docutils literal notranslate"><span class="pre">int()</span></code> no longer does), brush strokes land under the cursor, and an <code class="docutils literal notranslate"><span class="pre">imshow</span></code> event’s <code class="docutils literal notranslate"><span class="pre">xdata</span></code>/<code class="docutils literal notranslate"><span class="pre">ydata</span></code> is exactly the axis value of the pixel centre it hits (<code class="docutils literal notranslate"><span class="pre">pcolormesh</span></code> values are unchanged). (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/73">#73</a>)</p></li>
+<li><p>2-D tick labels now sit on the pixels they name: <code class="docutils literal notranslate"><span class="pre">imshow</span></code> axis values are placed at pixel centres (the image extends half a pixel past the first and last value, as matplotlib’s <code class="docutils literal notranslate"><span class="pre">imshow</span></code> extent does) through the same transform markers and pointer events use, so ticks also follow a letterboxed image instead of spanning the whole gutter, and an <code class="docutils literal notranslate"><span class="pre">origin='lower'</span></code> image gets y ticks at all; <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.set_view" title="anyplotlib.Plot2D.set_view"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_view()</span></code></a> / <code class="docutils literal notranslate"><span class="pre">set_xlim</span></code> / <code class="docutils literal notranslate"><span class="pre">set_ylim</span></code> read the axis the same way — <code class="docutils literal notranslate"><span class="pre">set_xlim(-0.5,</span> <span class="pre">n</span> <span class="pre">-</span> <span class="pre">0.5)</span></code> is the whole image, <code class="docutils literal notranslate"><span class="pre">set_xlim(0,</span> <span class="pre">n</span> <span class="pre">-</span> <span class="pre">1)</span></code> now crops the outer half pixels — and accept a descending <code class="docutils literal notranslate"><span class="pre">origin='lower'</span></code> y axis. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/74">#74</a>)</p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>New Features<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The 2-D colorbar now writes its display minimum and maximum beside the strip — both ends in one format, and the strip itself coloured through the display window (saturated beyond it, the way the image is) and spanning the image rather than the whole panel — so a labelled scale says how much and not only which way; the image gives up a value gutter budgeted for the numbers (fixed for ordinary values so a contrast drag never moves the image, wider for the rare long ones, dropped in a cell too narrow to keep 40 px of image, and mirrored in <code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_box()</span></code>) so they never clip. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/71">#71</a>)</p></li>
+<li><p>Text markers (<a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.add_texts" title="anyplotlib.Plot2D.add_texts"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_texts()</span></code></a>, <a class="reference internal" href="api/generated/anyplotlib.Plot1D.html#anyplotlib.Plot1D.add_texts" title="anyplotlib.Plot1D.add_texts"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_texts()</span></code></a> and <code class="docutils literal notranslate"><span class="pre">add_text</span></code>) gained <code class="docutils literal notranslate"><span class="pre">fontweight</span></code> for bold labels and <code class="docutils literal notranslate"><span class="pre">outline_color</span></code> / <code class="docutils literal notranslate"><span class="pre">outline_width</span></code> for a halo stroked under the text, which keeps a label legible over both light and dark parts of an image. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/73">#73</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id17">
+<h2>0.9.0 (2026-09-11)<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<section id="id18">
+<h3>New Features<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>A self-contained HTML page can now navigate its own data.
+<code class="docutils literal notranslate"><span class="pre">anyplotlib.embed.navigated_html</span></code> writes a figure, the dataset it navigates
+and a list of bindings into one file: drag the navigator’s crosshair and the
+signal panel shows that position’s frame, its overlays follow, and a detector
+drawn on the signal panel re-maps the navigator.  Data travels as <em>blocks</em>:
+dense arrays, or <code class="docutils literal notranslate"><span class="pre">Ragged</span></code> row-pointer blocks for a variable number of rows
+per position, packed by <code class="docutils literal notranslate"><span class="pre">pack_blocks</span></code> into one byte string the page decodes
+once.</p>
+<p>The JS mount handle gained the pieces that make that fast: <code class="docutils literal notranslate"><span class="pre">setImage</span></code> pushes
+raw pixel bytes straight to the renderer’s draw path (a fraction of a
+millisecond at 2048², against 129-136 ms through the panel state),
+<code class="docutils literal notranslate"><span class="pre">patchPanel</span></code> merges a partial state, and <code class="docutils literal notranslate"><span class="pre">panelIds</span></code> lists the panels.  The
+runtime and its readers (<code class="docutils literal notranslate"><span class="pre">mountNavigated</span></code>, <code class="docutils literal notranslate"><span class="pre">dense</span></code>, <code class="docutils literal notranslate"><span class="pre">ragged</span></code>,
+<code class="docutils literal notranslate"><span class="pre">maskFromWidget</span></code>, <code class="docutils literal notranslate"><span class="pre">rasterDisks</span></code>, <code class="docutils literal notranslate"><span class="pre">robustLevels</span></code>, <code class="docutils literal notranslate"><span class="pre">toU8</span></code>) are exported
+from <code class="docutils literal notranslate"><span class="pre">figure_esm.js</span></code> for hosts that already own their data. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/69">#69</a>)</p>
+</li>
+<li><p>Figures can now be <strong>saved and copied as PNG images</strong>. Right-click any plot for a
+menu offering <em>Copy image</em>, <em>Save PNG…</em>, <em>Save full view…</em> and <em>Save at native
+resolution…</em> for the panel you clicked, the same for the whole figure, and a
+sticky <strong>Theme</strong> choice (<em>Current</em> / <em>Light</em> / <em>Dark</em>) so a dark-themed notebook
+can still produce a light figure for a paper. <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> (<code class="docutils literal notranslate"><span class="pre">Cmd+C</span></code> on macOS)
+copies the plot under the cursor to the clipboard, with a brief
+<em>“Image copied to clipboard”</em> confirmation; with no plot hovered it copies the
+whole figure. Inside JupyterLab, PyCharm and VS Code the badge is the reliable
+route: those hosts install their own <code class="docutils literal notranslate"><span class="pre">contextmenu</span></code> and keyboard handlers and
+may swallow a right-click or <code class="docutils literal notranslate"><span class="pre">Cmd+C</span></code> before the figure ever sees it. <em>Save PNG…</em> downloads without any permission prompt; a separate <em>Save as…</em>
+entry opens a real system file dialog where the browser supports one
+(Chromium), at the cost of Chrome’s file-editing permission prompt. Hosts that
+block script-started downloads get an in-figure preview instead.
+The three sources are <em>current view</em> (zoom, pan and contrast
+exactly as displayed), <em>full view</em> (the whole data extent at the panel’s
+on-screen resolution) and <em>native resolution</em> (one output pixel per data pixel,
+with the axes, colorbar, title, markers and widgets all redrawn at that size).</p>
+<p>The same thing is available from Python as <a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.savefig" title="anyplotlib.Figure.savefig"><code class="xref py py-meth docutils literal notranslate"><span class="pre">savefig()</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;figure.png&quot;</span><span class="p">)</span>                                <span class="c1"># as displayed</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;paper.png&quot;</span><span class="p">,</span> <span class="n">theme</span><span class="o">=</span><span class="s2">&quot;light&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>         <span class="c1"># light, 2x</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;data.png&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">&quot;native&quot;</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">plot</span><span class="p">)</span>     <span class="c1"># 1:1 with the data</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">savefig</span></code> renders through the real JavaScript renderer in a headless browser,
+so the output is exactly what the figure looks like on screen — it needs
+Playwright (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&quot;anyplotlib[docs]&quot;</span></code> then
+<code class="docutils literal notranslate"><span class="pre">playwright</span> <span class="pre">install</span> <span class="pre">chromium</span></code>). <code class="docutils literal notranslate"><span class="pre">source=&quot;native&quot;</span></code> works even for a <strong>tiled</strong>
+plot, whose full-resolution array normally never leaves Python: the backend is
+re-sampled at full resolution for the export only, leaving the live figure
+untouched. In the browser that case is offered but disabled, with a tooltip
+pointing at <code class="docutils literal notranslate"><span class="pre">savefig</span></code>, because the page only ever holds a downsampled
+overview.</p>
+<p>Downstream applications can add their own entries to the menu through the
+embedding handle, so a host can save formats anyplotlib knows nothing about:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">handle</span><span class="o">.</span><span class="n">registerExportAction</span><span class="p">({</span>
+  <span class="nb">id</span><span class="p">:</span> <span class="s1">&#39;save-tiff&#39;</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="s1">&#39;Save as TIFF…&#39;</span><span class="p">,</span> <span class="n">scope</span><span class="p">:</span> <span class="s1">&#39;panel&#39;</span><span class="p">,</span>
+  <span class="n">handler</span><span class="p">:</span> <span class="p">(</span><span class="n">ctx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">host</span><span class="o">.</span><span class="n">writeTiff</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">panelId</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">exportCanvas</span><span class="p">()</span><span class="o">.</span><span class="n">canvas</span><span class="p">),</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>The handler receives the clicked panel, its state, the chosen theme, and bound
+<code class="docutils literal notranslate"><span class="pre">exportPNG</span></code> / <code class="docutils literal notranslate"><span class="pre">exportCanvas</span></code> / <code class="docutils literal notranslate"><span class="pre">downloadPNG</span></code> / <code class="docutils literal notranslate"><span class="pre">copyPNG</span></code> / <code class="docutils literal notranslate"><span class="pre">toast</span></code>
+helpers. See <a class="reference internal" href="user_guide/exporting.html"><span class="doc">Exporting images</span></a> for the full reference.</p>
+</li>
+<li><p>The 2-D hover readout now also names the <strong>value</strong> of the pixel under the
+cursor — <code class="docutils literal notranslate"><span class="pre">v:&lt;value&gt;</span></code> for a colourmapped image, <code class="docutils literal notranslate"><span class="pre">rgb:r,g,b</span></code> for a true-colour
+one — alongside the existing physical and pixel coordinates. It is exact:
+integer data whose range fits the 256 transferred codes is inverted locally,
+and for anything wider the renderer asks Python for the true value once the
+cursor dwells on a pixel (<code class="docutils literal notranslate"><span class="pre">imshow(...,</span> <span class="pre">probe_exact=True)</span></code> by default, tunable
+via <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.set_value_probe" title="anyplotlib.Plot2D.set_value_probe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_value_probe()</span></code></a>), falling back to the quantised
+estimate when no kernel can answer. Zoomed into a detail tile the value comes
+from the tile’s native pixels rather than the coarser overview.
+The <strong>v</strong> key toggles the on-image pill, and
+<a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.set_readout_visible" title="anyplotlib.Plot2D.set_readout_visible"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_readout_visible()</span></code></a> turns it off from Python while
+keeping the readout live: embedding hosts receive every update through
+<code class="docutils literal notranslate"><span class="pre">mount()</span></code>’s <code class="docutils literal notranslate"><span class="pre">opts.onReadout</span></code> callback and an <code class="docutils literal notranslate"><span class="pre">apl:readout</span></code> DOM event — so
+an Electron app can render position and value in its own status bar instead,
+where it covers no data. 2-D pointer events also carry <code class="docutils literal notranslate"><span class="pre">img_x</span></code>/<code class="docutils literal notranslate"><span class="pre">img_y</span></code> now,
+the cursor’s position in image pixels.</p></li>
+</ul>
+</section>
+<section id="id20">
+<h3>Bug Fixes<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixed a tiled <a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.imshow" title="anyplotlib.Axes.imshow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">imshow()</span></code></a> of a <strong>signed</strong> integer frame
+displaying wrapped values: a <code class="docutils literal notranslate"><span class="pre">uint32</span></code> accumulator in the overview box-mean read
+an <code class="docutils literal notranslate"><span class="pre">int16</span></code> <code class="docutils literal notranslate"><span class="pre">-100</span></code> as <code class="docutils literal notranslate"><span class="pre">+1073741696</span></code>, raised
+<code class="docutils literal notranslate"><span class="pre">_UFuncOutputCastingError</span></code> on a non-divisible grid, and overflowed on any dtype
+wider than 16 bits; the accumulator is now sized to the data, which also makes the
+overview up to 4x faster on large float frames. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/65">#65</a>)</p></li>
+<li><p><a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.save_html" title="anyplotlib.Figure.save_html"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save_html()</span></code></a>, <a class="reference internal" href="user_guide/embedding.html#anyplotlib.embed.to_html" title="anyplotlib.embed.to_html"><code class="xref py py-func docutils literal notranslate"><span class="pre">to_html()</span></code></a> and
+<a class="reference internal" href="user_guide/embedding.html#anyplotlib.embed.figure_state" title="anyplotlib.embed.figure_state"><code class="xref py py-func docutils literal notranslate"><span class="pre">figure_state()</span></code></a> now capture the view the reader is
+actually looking at. Zoom, pan, orbit and the colorbar / scale-mode shortcuts
+are applied in the browser and written back to the panel traits, but nothing on
+the Python side read them back, so every snapshot silently reset the figure to
+the view it was created with. Those keys are now reconciled into the plot state
+before a snapshot is taken.</p></li>
+<li><p>Fixed PNG export producing a mostly-blank image when the figure is wider than
+the notebook cell. In that case the renderer shrinks the figure with a CSS
+<code class="docutils literal notranslate"><span class="pre">transform:</span> <span class="pre">scale()</span></code>, which makes element rectangles report <em>visual</em> pixels
+while the export sized its canvas in <em>native</em> pixels — so the panels were
+composited into the top-left corner and the remainder was filled with the
+background colour. Export coordinates are now un-scaled by the live transform.</p></li>
+<li><p>Modified key presses no longer trigger a plot’s single-letter shortcuts. The
+panel key handlers matched on the bare letter without checking modifiers, so
+<code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> toggled the colorbar instead of copying, and <code class="docutils literal notranslate"><span class="pre">Cmd+S</span></code> — JupyterLab’s
+<em>save notebook</em> — silently flipped a 2-D plot’s colour scale to symlog. Keys
+pressed with <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>, <code class="docutils literal notranslate"><span class="pre">Cmd</span></code> or <code class="docutils literal notranslate"><span class="pre">Alt</span></code> are now left to the host. They are
+still reported to Python <code class="docutils literal notranslate"><span class="pre">key_down</span></code> callbacks exactly as before, so nothing
+that observes the full keystroke changes.</p></li>
+</ul>
+</section>
+</section>
+<section id="id22">
+<h2>0.8.0 (2026-08-25)<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<section id="id23">
+<h3>API and Behaviour Changes<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In tile mode, <code class="docutils literal notranslate"><span class="pre">set_data</span></code>/<code class="docutils literal notranslate"><span class="pre">update_tile_source</span></code> now re-derive the quantisation band
+<code class="docutils literal notranslate"><span class="pre">raw_min</span></code>/<code class="docutils literal notranslate"><span class="pre">raw_max</span></code> from the incoming frame when the current band is unset or
+degenerate (it previously stayed as first derived, even from a flat placeholder). A
+band that is already valid is still never re-derived, so a contrast change keeps
+re-windowing in the LUT with no pixel re-encode. One visible consequence: a tiled plot
+born on a placeholder now quantises subsequent frames over the frame’s own range
+rather than the display window, matching what <code class="docutils literal notranslate"><span class="pre">imshow</span></code> of a large frame has always
+done — so its wire bytes can differ by a rounding step from the equivalent untiled
+plot, while the displayed image is unchanged. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/60">#60</a>)</p></li>
+</ul>
+</section>
+<section id="id25">
+<h3>New Features<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Added <code class="xref py py-meth docutils literal notranslate"><span class="pre">set_tile_band()</span></code> to pin the fixed quantisation
+band tile bytes are encoded over, for a consumer that already knows the honest range
+(a camera’s bit depth, a detector’s saturation point) or whose source starts flat and
+so has no range to auto-derive. It re-samples the overview and any active detail tile
+over the new band in a single push, replacing the practice of reaching into
+<code class="docutils literal notranslate"><span class="pre">plot._state[&quot;raw_min&quot;/&quot;raw_max&quot;]</span></code> and calling <code class="docutils literal notranslate"><span class="pre">update_tile_source()</span></code> by hand. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/60">#60</a>)</p></li>
+<li><p>Added <code class="xref py py-meth docutils literal notranslate"><span class="pre">set_display_window()</span></code>, which moves the
+contrast window without re-quantising the pixels — the non-destructive
+counterpart to <code class="xref py py-meth docutils literal notranslate"><span class="pre">set_clim()</span></code>, and what lets a
+saved page be re-windowed with no Python behind it. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/61">#61</a>)</p></li>
+</ul>
+</section>
+<section id="id28">
+<h3>Bug Fixes<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixed a tiled 2-D image rendering solid black when tile mode was entered on a flat
+placeholder frame (e.g. <code class="docutils literal notranslate"><span class="pre">imshow</span></code> of zeros before real data exists). The fixed
+quantisation band <code class="docutils literal notranslate"><span class="pre">raw_min</span></code>/<code class="docutils literal notranslate"><span class="pre">raw_max</span></code> was derived from that placeholder — a
+degenerate <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> — and no later <code class="docutils literal notranslate"><span class="pre">set_data</span></code> re-derived it, leaving the two ends
+of the protocol disagreeing about what it meant: the Python encoder treats a
+degenerate band as unset and quantises over the display window, while the renderer
+honoured <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> and mapped every code below the display floor. The panel rendered
+black on the WebGPU and Canvas2D paths alike, beside perfectly healthy stats and
+histograms, with no warning. <code class="docutils literal notranslate"><span class="pre">set_data</span></code> and <code class="docutils literal notranslate"><span class="pre">update_tile_source</span></code> now re-derive a
+degenerate band from the incoming frame, and the renderer falls back to the display
+window for a degenerate band in tile mode — in the image LUT and in the colorbar
+tick placement, which read the band the same way. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/60">#60</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id30">
+<h2>0.7.3 (2026-08-13)<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<section id="id31">
+<h3>New Features<a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Plot2D.add_circle_widget</span></code> gains <code class="docutils literal notranslate"><span class="pre">lock_center</span></code>: the centre is pinned and
+only the radius is draggable. A grab on the ring body is refused at hit-test
+time and falls through to the plot’s own pan, so the hover cursor never
+promises a move and the centre cannot drift. Use it when the centre is fixed by
+the data — a ring on a power spectrum is centred on the DC term, and one nudged
+off-centre silently corrupts every radius measured from it.</p></li>
+</ul>
+</section>
+</section>
+<section id="id32">
+<h2>0.7.2 (2026-08-03)<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<section id="id33">
+<h3>Bug Fixes<a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Plot2D.set_overlay_mask</span></code> now works in TILE mode. The renderer sizes the mask
+against <code class="docutils literal notranslate"><span class="pre">base_width</span> <span class="pre">||</span> <span class="pre">image_width</span></code> – the tile overview grid – but tile mode
+sets <code class="docutils literal notranslate"><span class="pre">image_width</span></code> to the full native frame, so the shape check accepted only
+the one shape the renderer silently discards (<code class="docutils literal notranslate"><span class="pre">maskCache</span> <span class="pre">=</span> <span class="pre">null</span></code>, no error) and
+rejected the one that actually renders. On a 4096x4096 tiled plot neither a
+1024x1024 nor a 4096x4096 mask could be drawn: the first raised <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>,
+the second encoded 22.4 MB the renderer dropped. Both shapes are now accepted and
+a full-resolution mask is reduced to the overview grid with a block ANY – never
+a subsample, so an object a few pixels across cannot vanish into a skipped
+sample.</p></li>
+</ul>
+</section>
+</section>
+<section id="id34">
+<h2>0.7.1 (2026-08-02)<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<section id="id35">
+<h3>Bug Fixes<a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">save_html</span></code> / <code class="docutils literal notranslate"><span class="pre">to_html</span></code> / <code class="docutils literal notranslate"><span class="pre">figure_state</span></code> dropping image pixels
+under the Electron binary transport: the snapshot kept the <code class="docutils literal notranslate"><span class="pre">&quot;\x00bin:&quot;</span></code>
+change-tokens whose bytes only ever ride the live PLOTBIN channel, so an
+overlay added with <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.add_layer" title="anyplotlib.Plot2D.add_layer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_layer()</span></code></a> did not render in the
+exported document. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/52">#52</a>)</p></li>
+</ul>
+</section>
+<section id="id37">
+<h3>Documentation<a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixed the documentation build failing on
+<a class="reference internal" href="api/keys.html#anyplotlib.keys.KeyOverlay" title="anyplotlib.keys.KeyOverlay"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyOverlay</span></code></a>, whose <code class="docutils literal notranslate"><span class="pre">id</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> were described
+both in the class docstring and by the properties themselves — a duplicate
+object description, which the build treats as an error. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/53">#53</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id39">
+<h2>0.7.0 (2026-07-31)<a class="headerlink" href="#id39" title="Link to this heading">#</a></h2>
+<section id="id40">
+<h3>New Features<a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Added <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_key()</span></code> for pinning a floating image <em>key</em> over
+a panel — an inverse pole figure triangle over an orientation map, a hue wheel
+over a polarization field, a phase key over a segmentation.  A key is the scale
+bar’s sibling: it floats in screen space and neither pans nor zooms with the
+data, it takes an RGBA image so a triangle or a disc needs no rectangular card
+around it, and <code class="docutils literal notranslate"><span class="pre">labels=</span></code> annotates the picture itself (an IPF triangle’s
+corner indices) in fractions of the key image.  Optional <code class="docutils literal notranslate"><span class="pre">bgcolor</span></code> /
+<code class="docutils literal notranslate"><span class="pre">border</span></code> / <code class="docutils literal notranslate"><span class="pre">alpha</span></code> give it a card when the data underneath is busy, and
+<code class="docutils literal notranslate"><span class="pre">hover_only=True</span></code> reveals it only while the pointer is over the panel.
+Available on every panel type, and included in PNG export.</p></li>
+</ul>
+</section>
+</section>
+<section id="id41">
+<h2>0.6.0 (2026-07-31)<a class="headerlink" href="#id41" title="Link to this heading">#</a></h2>
+<section id="id42">
+<h3>API and Behaviour Changes<a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>3-D orbit drags have reversed direction.</strong>  Both azimuth and elevation now
+move the geometry <em>with</em> the cursor instead of away from it, matching
+matplotlib’s <code class="docutils literal notranslate"><span class="pre">mplot3d</span></code> and every other turntable control — dragging right
+spins a globe right.  Azimuth and elevation position the <em>camera</em>, so adding
+the drag delta swept the surface the opposite way, as if you had grabbed its
+far side.  Any muscle memory (or scripted pointer drag) built against the old
+direction is inverted; panels driven from Python with
+<a class="reference internal" href="api/generated/anyplotlib.Plot3D.html#anyplotlib.Plot3D.set_view" title="anyplotlib.Plot3D.set_view"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_view()</span></code></a> are unaffected.</p></li>
+</ul>
+</section>
+<section id="id43">
+<h3>New Features<a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="api/generated/anyplotlib.Event.html#anyplotlib.Event" title="anyplotlib.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> now carries <code class="docutils literal notranslate"><span class="pre">azimuth</span></code> and <code class="docutils literal notranslate"><span class="pre">elevation</span></code> for 3-D
+orbit events. The renderer had always emitted them alongside <code class="docutils literal notranslate"><span class="pre">zoom</span></code>, but they
+were dropped on the way to Python — and since a JS-side drag does not sync back
+into <code class="docutils literal notranslate"><span class="pre">Plot3D._state</span></code>, a handler had no way to react to an orbit at all. See
+the new <code class="docutils literal notranslate"><span class="pre">Star</span> <span class="pre">Globe</span> <span class="pre">Explorer</span></code> gallery example, which links a celestial sphere
+to a sky map through them.</p></li>
+<li><p>Added <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.add_brush_widget" title="anyplotlib.Plot2D.add_brush_widget"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_brush_widget()</span></code></a> for painting freehand
+multi-class label strokes on a 2-D image with Shift-drag, leaving a bare drag to
+pan as before.</p></li>
+<li><p>Added <a class="reference internal" href="api/generated/anyplotlib.Plot3D.html#anyplotlib.Plot3D.set_texture" title="anyplotlib.Plot3D.set_texture"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_texture()</span></code></a> for wrapping an image around a 3-D
+surface — a globe, a planet, or a star chart on the celestial sphere — with
+optional diffuse shading and backface culling.  <code class="docutils literal notranslate"><span class="pre">Axes.plot_surface</span></code> gained
+<code class="docutils literal notranslate"><span class="pre">texture=</span></code>, <code class="docutils literal notranslate"><span class="pre">bounds=</span></code>, and <code class="docutils literal notranslate"><span class="pre">gpu=</span></code> to match.  Textured surfaces render on
+WebGPU when it is available (roughly 9k triangles at 54 ms/frame on Canvas2D
+versus 0.4 ms on the GPU), falling back to Canvas2D silently otherwise.
+<code class="docutils literal notranslate"><span class="pre">set_axis_off()</span></code> now also hides a 3-D panel’s axis lines, labels, and ticks.</p></li>
+</ul>
+</section>
+<section id="id44">
+<h3>Bug Fixes<a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixed WebGPU 3-D geometry being clipped at the corners of a cube-shaped
+dataset.  The clip-space depth scale let <code class="docutils literal notranslate"><span class="pre">clip.z</span></code> reach 1.09 for a point at
+the far corner of the normalised bounds box, outside the <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code> range
+WebGPU keeps, so the nearest corner of a dense <a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.scatter3d" title="anyplotlib.Axes.scatter3d"><code class="xref py py-meth docutils literal notranslate"><span class="pre">scatter3d()</span></code></a>
+cloud silently vanished at the default camera angles.  Spherical geometry was
+never affected.</p></li>
+<li><p>Fixed an inverted depth comparison in the WebGPU 3-D projection: a GPU-rendered
+<a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.scatter3d" title="anyplotlib.Axes.scatter3d"><code class="xref py py-meth docutils literal notranslate"><span class="pre">scatter3d()</span></code></a> cloud drew its far points on top of its near
+ones wherever two points overlapped on screen.  Voxel panels were unaffected
+(they disable depth writes), and the Canvas2D path was always correct.</p></li>
+<li><p>Fixed the docs deployment racing itself on release. A push to <code class="docutils literal notranslate"><span class="pre">main</span></code> and its
+release tag are different refs, so the <code class="docutils literal notranslate"><span class="pre">docs-${{</span> <span class="pre">github.ref</span> <span class="pre">}}</span></code> concurrency
+group put them in separate groups and both pushed to <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> at once; the
+loser was rejected and its versioned directory never appeared, while
+<code class="docutils literal notranslate"><span class="pre">switcher.json</span></code> still advertised the version. The deploy job now uses a
+ref-independent group so deployments queue instead.</p></li>
+</ul>
+</section>
+</section>
+<section id="id45">
+<h2>0.5.0 (2026-07-26)<a class="headerlink" href="#id45" title="Link to this heading">#</a></h2>
+<section id="id46">
+<h3>New Features<a class="headerlink" href="#id46" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">Widget.set()</span></code> takes <code class="docutils literal notranslate"><span class="pre">_notify=False</span></code> to move a widget without firing
+<code class="docutils literal notranslate"><span class="pre">pointer_move</span></code> callbacks, so a handler that writes back to its own widget no
+longer feeds into itself.  Widgets also gained a
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">remove()</span></code> method.</p></li>
+<li><p><a class="reference internal" href="api/generated/anyplotlib.Plot1D.html#anyplotlib.Plot1D.add_range_widget" title="anyplotlib.Plot1D.add_range_widget"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_range_widget()</span></code></a> takes <code class="docutils literal notranslate"><span class="pre">orientation=&quot;vertical&quot;</span></code>
+for a band that selects a range of values, and <code class="docutils literal notranslate"><span class="pre">snap_values</span></code> to restrict a
+drag to a set of allowed positions (matplotlib’s
+<code class="docutils literal notranslate"><span class="pre">SpanSelector.snap_values</span></code>).  <code class="docutils literal notranslate"><span class="pre">snap_values</span></code> is also available on the
+vline, hline and point widgets.</p></li>
+<li><p>Added <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.set_scalebar_style" title="anyplotlib.Plot2D.set_scalebar_style"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_scalebar_style()</span></code></a> to recolour the automatic
+scale bar, which was hardcoded white on a translucent dark pill and unreadable
+over a light image.  <code class="docutils literal notranslate"><span class="pre">bgcolor=&quot;none&quot;</span></code> drops the pill entirely.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">linestyle=&quot;none&quot;</span></code> (also spelled <code class="docutils literal notranslate"><span class="pre">&quot;None&quot;</span></code>) for a series drawn as
+markers with no connecting line — matplotlib’s scatter idiom,
+<code class="docutils literal notranslate"><span class="pre">ax.plot(y,</span> <span class="pre">linestyle=&quot;none&quot;,</span> <span class="pre">marker=&quot;o&quot;)</span></code>.  An explicit <code class="docutils literal notranslate"><span class="pre">linewidth=0</span></code>
+now means the same thing; it previously fell back to the 1.5 default in the
+renderer.</p></li>
+<li><p>Added three 2-D overlay widget kinds: <code class="docutils literal notranslate"><span class="pre">line</span></code>
+(<a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.add_line_widget" title="anyplotlib.Plot2D.add_line_widget"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_line_widget()</span></code></a>), a bare two-endpoint segment for
+line profiles and two-point measurements, and <code class="docutils literal notranslate"><span class="pre">vline</span></code> / <code class="docutils literal notranslate"><span class="pre">hline</span></code>, full-height
+and full-width rules grabbable anywhere along their length.</p></li>
+<li><p>Clicking a 1-D panel now emits a <code class="docutils literal notranslate"><span class="pre">pointer_down</span></code> event carrying the clicked
+position as <code class="docutils literal notranslate"><span class="pre">xdata</span></code>/<code class="docutils literal notranslate"><span class="pre">ydata</span></code>, matching 2-D panels; it previously fired only
+when the click landed on a line.  Clicks on a line still report <code class="docutils literal notranslate"><span class="pre">line_id</span></code>,
+so existing line-click handlers are unaffected.</p></li>
+<li><p>Panels expose their geometry through <code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_box()</span></code>,
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">data_to_display()</span></code> and
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">display_to_data()</span></code>, so callers working in display space
+no longer have to re-derive the renderer’s layout constants and letterbox maths
+themselves.</p></li>
+<li><p>Sized marker types take <code class="docutils literal notranslate"><span class="pre">size_units=&quot;px&quot;</span></code> so their radii and widths stay
+fixed in screen pixels through a zoom instead of scaling with the data — what
+a marker standing in for a <em>point</em> wants, and what matplotlib does by sizing
+scatter markers in display points.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">edgecolors</span></code> and <code class="docutils literal notranslate"><span class="pre">facecolors</span></code> accept a sequence of colours parallel to the
+markers — matplotlib’s <code class="docutils literal notranslate"><span class="pre">edgecolors=[...]</span></code> / scatter <code class="docutils literal notranslate"><span class="pre">c=[...]</span></code> — for every
+marker type on both 1-D and 2-D panels, where previously only <code class="docutils literal notranslate"><span class="pre">points</span></code> and
+<code class="docutils literal notranslate"><span class="pre">polygons</span></code> on 1-D panels honoured it.  A short sequence cycles.</p></li>
+</ul>
+</section>
+<section id="id47">
+<h3>Bug Fixes<a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">crosshair</span></code> widget can now be grabbed anywhere along either of its rules
+rather than only at the one-pixel centre hotspot; grabbing a rule constrains
+the drag to that rule’s own axis.</p></li>
+<li><p>The 1-D y-axis label is no longer drawn through the tick numbers; its position
+was a fixed fraction of the left gutter and is now measured against the widest
+tick string.</p></li>
+<li><p>The colorbar strip is no longer drawn flush against the image: there is now a
+6 px gap, taken out of the image width so the strip cannot be pushed off the
+panel, and settable with <a class="reference internal" href="api/generated/anyplotlib.Plot2D.html#anyplotlib.Plot2D.set_colorbar_pad" title="anyplotlib.Plot2D.set_colorbar_pad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_colorbar_pad()</span></code></a>.  This
+shifts every colorbar plot by 4 px.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">save_html</span></code> / <code class="docutils literal notranslate"><span class="pre">to_html</span></code> / <code class="docutils literal notranslate"><span class="pre">figure_state</span></code> now capture overlay widgets at
+their current positions; widget moves reach JS as targeted events that never
+rewrite the panel traits, so a snapshot used to show every widget where it was
+created.</p></li>
+</ul>
+</section>
+</section>
+<section id="id48">
+<h2>0.4.1 (2026-07-26)<a class="headerlink" href="#id48" title="Link to this heading">#</a></h2>
+<section id="id49">
+<h3>New Features<a class="headerlink" href="#id49" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">max_extent=</span></code> to <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeWidget</span></code> and
+<code class="xref py py-class docutils literal notranslate"><span class="pre">RectangleWidget</span></code> (and the matching
+<code class="docutils literal notranslate"><span class="pre">add_range_widget</span></code> / <code class="docutils literal notranslate"><span class="pre">add_rectangle_widget</span></code> factories) — a size cap enforced
+<em>while dragging</em>, so the widget physically stops growing instead of being
+clamped after the fact. The dragged edge/corner pins and the opposite one stays
+put, so the selection never jumps under the cursor. <code class="docutils literal notranslate"><span class="pre">RangeWidget</span></code> takes a span
+width in data units; <code class="docutils literal notranslate"><span class="pre">RectangleWidget</span></code> takes a scalar (both axes) or a
+<code class="docutils literal notranslate"><span class="pre">(max_w,</span> <span class="pre">max_h)</span></code> pair. Default <code class="docutils literal notranslate"><span class="pre">None</span></code> leaves widgets unbounded.</p>
+<p>Use it when a widget’s size drives real downstream work — e.g. an integrating
+selector whose span is a number of frames to read.</p>
+</li>
+</ul>
+</section>
+<section id="id50">
+<h3>Bug Fixes<a class="headerlink" href="#id50" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixed the band-style <code class="xref py py-class docutils literal notranslate"><span class="pre">RangeWidget</span></code> being impossible
+to drag by its body when narrow. Each edge claimed a fixed ±12 px grab zone, so
+a band under ~24 px wide on screen (routine when zoomed out, or when its span is
+capped) had no grabbable middle: aiming at the body to translate the band caught
+an edge and resized it instead. Each edge now takes at most a third of the
+band’s width, leaving the middle third for the move handle. Wide bands are
+unaffected.</p></li>
+</ul>
+</section>
+</section>
+<section id="id51">
+<h2>0.4.0 (2026-07-18)<a class="headerlink" href="#id51" title="Link to this heading">#</a></h2>
+<section id="id52">
+<h3>New Features<a class="headerlink" href="#id52" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Added <code class="xref py py-meth docutils literal notranslate"><span class="pre">indicate_point()</span></code> — the point sibling of
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">indicate_region()</span></code>: a circle-and-cross marker
+at a data point of the parent plot plus a single leader line to the inset’s
+nearest corner, tracking zoom/pan and hiding the leader while minimized.</p></li>
+<li><p>Added <code class="xref py py-meth docutils literal notranslate"><span class="pre">set_legend_fontsize()</span></code> to control the
+legend text size on 1-D line plots.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">linewidth=</span></code> to every overlay widget constructor and <code class="docutils literal notranslate"><span class="pre">add_*_widget</span></code>
+factory on <code class="xref py py-class docutils literal notranslate"><span class="pre">Plot2D</span></code> and
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Plot1D</span></code> (rectangle, circle, annular, crosshair,
+polygon, vline, hline, range, point) — stroke width in px, default 2, stored
+and round-tripped like <code class="docutils literal notranslate"><span class="pre">color</span></code>.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">tint=</span></code> to <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_layer()</span></code> and
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">set()</span></code> — a <code class="docutils literal notranslate"><span class="pre">#rgb</span></code>/<code class="docutils literal notranslate"><span class="pre">#rrggbb</span></code> hex colour that
+renders the layer as a clear→colour intensity ramp (transparent at low
+intensity, opaque tint at high, via a 256×4 RGBA LUT) instead of a named
+colormap; passing <code class="docutils literal notranslate"><span class="pre">cmap=</span></code> reverts a tinted layer to colormap display.</p></li>
+<li><p>An <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_inset()</span></code> with no title (the default,
+<code class="docutils literal notranslate"><span class="pre">title=&quot;&quot;</span></code>) now renders with NO title-bar strip at all — a clean bordered
+plot box, content filling the whole area, instead of a useless empty header.
+A titled inset is unchanged: its bar renders as before, with click-to-toggle
+minimize. A title-less inset has no minimize affordance (there is no bar to
+click), but drag-to-move / drag-to-resize in edit mode still work exactly as
+before, since those gestures are wired on the inset body, not the bar.</p></li>
+<li><p>Double-clicking a plot’s text chrome now reports which element was hit. The
+<code class="docutils literal notranslate"><span class="pre">double_click</span></code> <a class="reference internal" href="api/generated/anyplotlib.Event.html#anyplotlib.Event" title="anyplotlib.callbacks.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> gains a <code class="docutils literal notranslate"><span class="pre">target</span></code> field
+naming the hit element — one of <code class="docutils literal notranslate"><span class="pre">'title'</span></code>, <code class="docutils literal notranslate"><span class="pre">'x_label'</span></code>, <code class="docutils literal notranslate"><span class="pre">'x_ticks'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'y_label'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y_ticks'</span></code>, <code class="docutils literal notranslate"><span class="pre">'colorbar_label'</span></code> or <code class="docutils literal notranslate"><span class="pre">'legend'</span></code> — so a host
+can open the right edit affordance for the axis label vs the ticks vs the title
+vs the colorbar label vs the legend. The axis gutters, colorbar strip and title
+band each get their own hit-test (2-D panels emit from the separate axis/title
+canvases; 1-D panels zone-split the single canvas around the plot rect and
+legend box). A plain plot-area double-click is unchanged and carries no
+<code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">event.target</span> <span class="pre">is</span> <span class="pre">None</span></code>), so existing handlers keep working.</p></li>
+<li><p>Insets can now be dragged and resized directly in the renderer’s edit mode
+(<code class="docutils literal notranslate"><span class="pre">edit_chrome</span></code>): drag the body to move an inset (a corner-stacked inset
+converts to a free anchor and its siblings re-stack), or drag the bottom-right
+grip to resize it (min 64 px per dimension). On release the renderer emits a
+new figure-level <code class="docutils literal notranslate"><span class="pre">inset_geometry_change</span></code> event carrying the final
+<code class="docutils literal notranslate"><span class="pre">anchor</span></code>/<code class="docutils literal notranslate"><span class="pre">w_frac</span></code>/<code class="docutils literal notranslate"><span class="pre">h_frac</span></code> (figure fractions), which
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">add_event_handler()</span></code> handlers can observe to
+persist the layout. The same geometry is applied programmatically via the new
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">set_geometry()</span></code> (<code class="docutils literal notranslate"><span class="pre">anchor</span></code>, <code class="docutils literal notranslate"><span class="pre">w_frac</span></code>,
+<code class="docutils literal notranslate"><span class="pre">h_frac</span></code>). Off edit mode the affordances are hidden and the inset is inert.</p></li>
+</ul>
+</section>
+<section id="id53">
+<h3>Bug Fixes<a class="headerlink" href="#id53" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">exportPNG</span></code> compositing WebGPU-rendered 3-D panels (<code class="docutils literal notranslate"><span class="pre">scatter3d</span></code> /
+<code class="docutils literal notranslate"><span class="pre">voxels</span></code>) as blank background rectangles — the 3-D render pass is now
+re-rendered synchronously in-task before the canvas readback, exactly like
+active-GPU 2-D image panels.</p></li>
+</ul>
+</section>
+</section>
+<section id="b1-2026-07-13">
+<h2>0.3.0b1 (2026-07-13)<a class="headerlink" href="#b1-2026-07-13" title="Link to this heading">#</a></h2>
+<section id="id54">
+<h3>New Features<a class="headerlink" href="#id54" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Added <code class="xref py py-class docutils literal notranslate"><span class="pre">ArrowWidget</span></code> (draggable arrow overlay, tail
+at <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> and head at <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">+</span> <span class="pre">u,</span> <span class="pre">y</span> <span class="pre">+</span> <span class="pre">v)</span></code>) via <code class="docutils literal notranslate"><span class="pre">Plot2D.add_arrow_widget</span></code> /
+<code class="docutils literal notranslate"><span class="pre">add_widget(&quot;arrow&quot;)</span></code>, and a <code class="docutils literal notranslate"><span class="pre">show_handles</span></code> option (default <code class="docutils literal notranslate"><span class="pre">True</span></code>) on
+every 2-D overlay widget to hide the grab-handle dots without affecting drag.</p></li>
+<li><p>Added figure-level edit-mode chrome to <a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure" title="anyplotlib.Figure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Figure</span></code></a>: the
+<code class="docutils literal notranslate"><span class="pre">edit_chrome</span></code> and <code class="docutils literal notranslate"><span class="pre">selected_panel</span></code> traits (per-panel hover / selection
+outlines), figure-background click events, and a figure-level annotation layer
+(<code class="docutils literal notranslate"><span class="pre">set_figure_markers</span></code> / <code class="docutils literal notranslate"><span class="pre">figure_markers</span></code>, positioned in figure fractions and
+always included in <code class="docutils literal notranslate"><span class="pre">exportPNG</span></code>) with figure-level callbacks via
+<code class="docutils literal notranslate"><span class="pre">add_event_handler</span></code>.</p></li>
+<li><p>Extended <a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure" title="anyplotlib.Figure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Figure</span></code></a> edit-mode interaction:</p>
+<ul>
+<li><p>Circle and rectangle overlay widgets are now <strong>resizable via visible nodes</strong> —
+a circle draws a centre (move) node and an east-point radius node; a rectangle
+draws all four corner nodes (opposite corner anchored on drag).  Drawn only
+when <code class="docutils literal notranslate"><span class="pre">show_handles</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, with matching resize cursors.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArrowWidget</span></code> <strong>tail is now a reshape node</strong>:
+dragging the tail moves it while the head stays anchored (dragging the shaft
+still moves the whole arrow; the head node still re-aims it).</p></li>
+<li><p>The selected-panel and hover <strong>outlines are fully inset</strong> (<code class="docutils literal notranslate"><span class="pre">outline-offset:</span>
+<span class="pre">-2px</span></code>) so an edge/corner panel’s ring is no longer clipped at the figure’s
+right/bottom edge.</p></li>
+<li><p><strong>Panel drag-swap</strong> under <code class="docutils literal notranslate"><span class="pre">edit_chrome</span></code>: each grid panel shows a move grip
+in its top-left corner; dragging it over a <em>different</em> panel emits a
+figure-level <code class="docutils literal notranslate"><span class="pre">pointer_up</span></code> event with <code class="docutils literal notranslate"><span class="pre">panel_swap:</span> <span class="pre">true</span></code> and
+<code class="docutils literal notranslate"><span class="pre">source_panel_id</span></code> / <code class="docutils literal notranslate"><span class="pre">target_panel_id</span></code> (new <a class="reference internal" href="api/generated/anyplotlib.Event.html#anyplotlib.Event" title="anyplotlib.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>
+fields).  anyplotlib performs no layout change itself — the host swaps and
+rebuilds.  Releasing on the source panel or empty space cancels cleanly; the
+grip is inert when <code class="docutils literal notranslate"><span class="pre">edit_chrome</span></code> is off.</p></li>
+<li><p>The JS <code class="docutils literal notranslate"><span class="pre">mount()</span></code> embedding entry point accepts an <code class="docutils literal notranslate"><span class="pre">onResize({width,</span>
+<span class="pre">height})</span></code> callback, fired (debounced) when the <strong>root container resizes</strong>, so
+an embedding host can relayout the figure to its new box.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id55">
+<h2>0.2.0 (2026-07-10)<a class="headerlink" href="#id55" title="Link to this heading">#</a></h2>
+<section id="id56">
+<h3>New Features<a class="headerlink" href="#id56" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>2-D scalar images can now render on the <strong>GPU via WebGPU</strong> (<code class="docutils literal notranslate"><span class="pre">imshow(...,</span>
+<span class="pre">gpu=&quot;auto&quot;|True|False)</span></code>): the image uploads as an R8 texture and a WGSL fragment
+shader applies the colormap LUT + contrast (clim) in one draw, replacing the
+per-pixel JavaScript colormap loop. Large images (≳1 megapixel) take the GPU path
+automatically; everything below the threshold, RGB images, <code class="docutils literal notranslate"><span class="pre">gpu=False</span></code>, and any
+device without WebGPU keep the identical Canvas2D path. <code class="docutils literal notranslate"><span class="pre">plot.gpu_active</span></code> reports
+which path ran. Verified on an NVIDIA Pascal GPU.</p></li>
+<li><p>Arbitrarily large images can now display through <strong>tile mode</strong>
+(<code class="docutils literal notranslate"><span class="pre">imshow(...,</span> <span class="pre">tile=&quot;auto&quot;)</span></code>): the figure shows a downsampled overview as its
+base and, after each zoom/pan settles, samples a high-resolution detail tile of
+just the visible region at panel resolution — deep zooms stay crisp without
+ever shipping the full-resolution frame. <code class="docutils literal notranslate"><span class="pre">Plot2D.enable_tile</span></code> /
+<code class="docutils literal notranslate"><span class="pre">update_tile_source</span></code> swap the underlying frame while the zoom and
+subselection persist (live-data contract), and a pluggable <code class="docutils literal notranslate"><span class="pre">TileBackend</span></code>
+(default: a fast vectorised numpy box-mean) lets out-of-core or GPU sources
+own the sampling.</p></li>
+<li><p>Markers gained a <code class="docutils literal notranslate"><span class="pre">clip_display</span></code> option controlling whether they draw
+outside the current axes view or are clipped to it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_extent</span></code> now updates the axes state (calibrated units / scale bar), so
+applying a calibrated extent after figure creation renders labelled axes
+instead of bare pixels.</p></li>
+<li><p>Regular <code class="docutils literal notranslate"><span class="pre">pcolormesh</span></code> meshes are detected and rasterized to an image for
+display (fast IPF-style heatmaps) instead of drawing per-quad.</p></li>
+</ul>
+</section>
+<section id="id57">
+<h3>Bug Fixes<a class="headerlink" href="#id57" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixed a display freeze under the Electron binary pixel transport: the routing
+layer stripped the pixel key out of the slimmed geom JSON, so the renderer’s
+“unchanged → skip re-upload” caches (Canvas2D blit cache, WebGPU texture,
+overlay-mask cache) fell back to a 4-sampled-byte fingerprint of the buffer —
+two frames differing anywhere else collided and the display stayed frozen on
+the old frame (seen as a stale overview after a movie scrub). The slimmed geom
+now carries a small <code class="docutils literal notranslate"><span class="pre">\x00bin:&lt;checksum&gt;</span></code> content token under the pixel key,
+binary buffers are additionally stamped with an arrival sequence as a fallback
+key, and the overlay-mask draw path now reads the binary byte side-channel
+(it previously only decoded base64, so masks never displayed over the binary
+transport).</p></li>
+<li><p>Fixed the WebGPU 2-D image path sampling a vertically MIRRORED window when the
+view was panned off-centre: the shader applied a global <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">v</span></code> flip after
+interpolating the <code class="docutils literal notranslate"><span class="pre">[v0,</span> <span class="pre">v1]</span></code> uv window, which sampled <code class="docutils literal notranslate"><span class="pre">[1-v1,</span> <span class="pre">1-v0]</span></code>
+instead — correct only for a full or vertically-centred view. Symptoms: pan-y
+moved the image the wrong way on GPU-rendered panels, and markers/widgets
+(drawn by the shared Canvas2D overlay transform, which was always correct)
+appeared detached from the image features they marked. The base and
+detail-tile passes share the shader, so both are fixed. GPU-vs-CPU screenshot
+parity tests (zoom, pan, markers, widgets, detail tile) now run on real WebGPU
+in headless Chromium (<code class="docutils literal notranslate"><span class="pre">channel=&quot;chromium&quot;</span></code> + <code class="docutils literal notranslate"><span class="pre">--enable-unsafe-webgpu</span></code>) and
+skip on machines with no adapter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Plot2D.set_data</span></code> no longer makes a float64 copy of every incoming frame.
+The float64 cast now happens lazily in the <code class="docutils literal notranslate"><span class="pre">.data</span></code> property (the only reader),
+so a frame stream — e.g. scrubbing an in-situ movie — keeps the source dtype and
+skips a ~12 ms float64 copy of a 4k frame per tick. <code class="docutils literal notranslate"><span class="pre">.data</span></code> still returns a
+read-only float64 copy, unchanged for callers.</p></li>
+<li><p>The Electron binary pixel transport now ships the RAW uint8 image bytes end to
+end, instead of base64-encoding them in <code class="docutils literal notranslate"><span class="pre">set_data</span></code> only to base64-decode them
+straight back in the routing layer. <code class="docutils literal notranslate"><span class="pre">Plot2D.set_data</span></code> stashes the raw bytes on
+the Figure’s <code class="docutils literal notranslate"><span class="pre">_raw_pixels</span></code> side-table and leaves a tiny content-checksum
+change-token in <code class="docutils literal notranslate"><span class="pre">image_b64</span></code>; <code class="docutils literal notranslate"><span class="pre">_electron._route_change</span></code> ships those bytes to a
+PLOTBIN frame directly. This removes the ~20 ms base64 encode, the ~17 ms decode,
+and the megabyte <code class="docutils literal notranslate"><span class="pre">json.dumps</span></code> of the pixel string from every scrub frame — a
+2.2x faster <code class="docutils literal notranslate"><span class="pre">set_data</span></code> (≈98 ms → ≈44 ms on a 2048² frame) and ~25% less
+bytes-on-wire. Non-Electron hosts (Jupyter / Pyodide / standalone / <code class="docutils literal notranslate"><span class="pre">save_html</span></code>)
+are unchanged: they have no PLOTBIN channel, so the token is resolved back to
+inline base64 via <code class="docutils literal notranslate"><span class="pre">Plot2D.resolve_pixel_tokens</span></code> when the figure state is
+serialised for them.</p></li>
+<li><p>Tile mode: a data update while zoomed in (<code class="docutils literal notranslate"><span class="pre">update_tile_source</span></code> with a detail
+tile shown) refreshes only the detail tile, leaving the overview base on the
+old frame — zooming out then flashed the pre-update frame. The skipped
+overview is now marked stale and re-sampled once on the next view settle
+(riding the same push as the detail/clear), preserving the per-frame skip
+optimisation while never exposing stale base pixels.</p></li>
+<li><p>Interactive zoom/pan on a 2-D image no longer re-serialises (and re-transmits)
+the full image on every mouse tick. The wheel/pan/orbit handlers write only the
+light <em>view</em> state back to the <code class="docutils literal notranslate"><span class="pre">panel_&lt;id&gt;_json</span></code> trait now, excluding the
+cached geometry (pixels, colormap LUT) that <code class="docutils literal notranslate"><span class="pre">_applyGeom</span></code> splices into the panel
+state for drawing. Previously the whole frame was <code class="docutils literal notranslate"><span class="pre">JSON.stringify</span></code>-d per tick —
+catastrophically so on the binary transport, where the pixel buffer is a
+<code class="docutils literal notranslate"><span class="pre">Uint8Array</span></code> that stringifies to a <code class="docutils literal notranslate"><span class="pre">{&quot;0&quot;:..,&quot;1&quot;:..}</span></code> object with one key per
+byte — which stalled zoom on large images.</p></li>
+<li><p>Fixed a first-paint race under the Electron binary transport: binary
+side-table bytes that arrived before <code class="docutils literal notranslate"><span class="pre">render()</span></code> attached its listeners were
+stranded, leaving the first frame blank until the next update — they are now
+spliced into the initial paint.</p></li>
+</ul>
+</section>
+<section id="maintenance">
+<h3>Maintenance<a class="headerlink" href="#maintenance" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">anyplotlib.__version__</span></code> is now exposed from the package metadata.</p></li>
+<li><p>Per-frame hot-path costs trimmed: the colormap LUT is cached instead of being
+rebuilt every frame (~100 ms), and small-range data rescales in float32
+(~60 ms → ~27 ms per 2048² frame).</p></li>
+</ul>
+</section>
+</section>
+<section id="id58">
+<h2>0.1.0 (2026-06-24)<a class="headerlink" href="#id58" title="Link to this heading">#</a></h2>
+<p>Initial release. Provides <code class="docutils literal notranslate"><span class="pre">Figure</span></code>, <code class="docutils literal notranslate"><span class="pre">Axes</span></code>, <code class="docutils literal notranslate"><span class="pre">GridSpec</span></code>, <code class="docutils literal notranslate"><span class="pre">subplots</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Plot1D</span></code>, <code class="docutils literal notranslate"><span class="pre">Plot2D</span></code>, <code class="docutils literal notranslate"><span class="pre">PlotMesh</span></code>, <code class="docutils literal notranslate"><span class="pre">Plot3D</span></code>, <code class="docutils literal notranslate"><span class="pre">PlotBar</span></code> and <code class="docutils literal notranslate"><span class="pre">PlotXY</span></code>, a
+full marker system, interactive overlay widgets, and a two-tier callback
+registry, plus the additions below.</p>
+<section id="id59">
+<h3>New Features<a class="headerlink" href="#id59" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Added <code class="xref py py-class docutils literal notranslate"><span class="pre">InsetAxes</span></code> — floating overlay sub-plots that sit
+above the main figure grid, created via <a class="reference internal" href="api/generated/anyplotlib.Figure.html#anyplotlib.Figure.add_inset" title="anyplotlib.Figure.add_inset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_inset()</span></code></a>
+and supporting all plot types (<a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.imshow" title="anyplotlib.Axes.imshow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">imshow()</span></code></a>,
+<a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.plot" title="anyplotlib.Axes.plot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot()</span></code></a>, <a class="reference internal" href="api/generated/anyplotlib.Axes.html#anyplotlib.Axes.pcolormesh" title="anyplotlib.Axes.pcolormesh"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pcolormesh()</span></code></a>, etc.)
+as well as interactive minimise, maximise, and restore states. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/6">#6</a>)</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">anyplotlib.sphinx_anywidget</span></code> Sphinx extension for interactive,
+Pyodide-powered figures in documentation (<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">anywidget-figure::</span></code> directive,
+automatic wheel building, Sphinx Gallery integration), plus several supporting
+improvements (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/9">#9</a>):</p>
+<ul class="simple">
+<li><p>Improved widget–parent page postMessage communication bridge.</p></li>
+<li><p>Made colormap LUT construction more robust against unknown colormap names.</p></li>
+<li><p>Subplot panels now use deterministic IDs.</p></li>
+<li><p>Added an end-to-end test for the Playwright thumbnail scraper.</p></li>
+</ul>
+</li>
+<li><p>3-D <code class="docutils literal notranslate"><span class="pre">scatter3d</span></code> and <code class="docutils literal notranslate"><span class="pre">voxels</span></code> now render on the GPU via WebGPU when
+available, as a transparent progressive enhancement: a <code class="docutils literal notranslate"><span class="pre">gpu=&quot;auto&quot;</span></code> kwarg
+(default) uses instanced WebGPU rendering above ~20k points / ~8k voxels and
+falls back to Canvas2D otherwise or whenever a GPU is unavailable (no
+<code class="docutils literal notranslate"><span class="pre">navigator.gpu</span></code>, null adapter, or device loss) — query the actual path via
+<code class="docutils literal notranslate"><span class="pre">plot.gpu_active</span></code>.  Voxel slice emphasis and per-face shading are GPU
+uniforms, so dragging a <code class="docutils literal notranslate"><span class="pre">PlaneWidget</span></code> re-renders without re-uploading
+geometry.  Decorations (axes, labels, sphere, planes, highlight) always
+render on the 2-D canvas, so visuals are identical to the fallback.  No new
+JavaScript dependencies (raw WebGPU + inline WGSL).</p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">PlotXY.pcolormesh()</span></code> now renders a <strong>regular, uniformly spaced scalar
+mesh</strong> as a single stretched RGBA raster instead of one polygon per cell — the
+fast path for dense orientation-density / IPF heatmaps. Irregular meshes,
+colour-string <code class="docutils literal notranslate"><span class="pre">c</span></code>, or an explicit <code class="docutils literal notranslate"><span class="pre">edgecolor</span></code> keep the per-cell polygon
+path. The win is twofold: the image is encoded once and travels on the deduped
+geometry channel (a view-only pan/zoom never re-transmits it), and the renderer
+blits it in a single <code class="docutils literal notranslate"><span class="pre">drawImage</span></code> whose cost is independent of cell count —
+so a 256×256 heatmap draws as fast as a 32×32 one.</p>
+<p>The underlying primitive is exposed directly as <code class="xref py py-meth docutils literal notranslate"><span class="pre">PlotXY.add_raster()</span></code>
+(also on <code class="xref py py-class docutils literal notranslate"><span class="pre">Plot1D</span></code>): an RGBA image drawn between data-coordinate
+<code class="docutils literal notranslate"><span class="pre">extent</span></code> corners, with an optional <code class="docutils literal notranslate"><span class="pre">clip_path</span></code> polygon (e.g. the curved
+fundamental-sector boundary). Image bytes ride the geometry channel
+(<code class="docutils literal notranslate"><span class="pre">Plot1D._GEOM_KEYS</span></code>) and the decoded bitmap is cached on the marker set.
+Pass <code class="docutils literal notranslate"><span class="pre">smooth=True</span></code> (on either <code class="docutils literal notranslate"><span class="pre">add_raster</span></code> or <code class="docutils literal notranslate"><span class="pre">pcolormesh</span></code>) to bilinearly
+interpolate the raster for a continuous heat field; the default keeps crisp
+nearest-neighbour cells.</p>
+<p>New example <code class="docutils literal notranslate"><span class="pre">Examples/Interactive/plot_ipf_density_map.py</span></code> — a linked IPF
+orientation map + density heat map where the modal (peak-density) bin is the
+“best-fit” orientation, ringed on the IPF and highlighted on the map.</p>
+</li>
+<li><p>Added <code class="xref py py-meth docutils literal notranslate"><span class="pre">Axes.axes2d()</span></code> / <code class="xref py py-class docutils literal notranslate"><span class="pre">PlotXY</span></code> — a blank <strong>data-coordinate
+2-D axis</strong> (matplotlib <code class="docutils literal notranslate"><span class="pre">transData</span></code> + <code class="docutils literal notranslate"><span class="pre">PathCollection</span></code> model). Set
+<code class="docutils literal notranslate"><span class="pre">xlim</span></code>/<code class="docutils literal notranslate"><span class="pre">ylim</span></code> (+ <code class="docutils literal notranslate"><span class="pre">aspect=&quot;equal&quot;</span></code>) and draw <code class="docutils literal notranslate"><span class="pre">scatter</span></code>/<code class="docutils literal notranslate"><span class="pre">plot</span></code>/<code class="docutils literal notranslate"><span class="pre">fill</span></code>/
+<code class="docutils literal notranslate"><span class="pre">text</span></code> as collection-style artists in data coords — the surface needed for
+stereographic / IPF / pole-figure plots (e.g. an orix plotting backend).
+<code class="docutils literal notranslate"><span class="pre">scatter(c=[...])</span></code> honours per-point face/edge colours, and <code class="docutils literal notranslate"><span class="pre">aspect=&quot;equal&quot;</span></code>
+applies matplotlib’s <code class="docutils literal notranslate"><span class="pre">apply_aspect</span></code> in the renderer (the panel box is shrunk
+and centred so one data unit spans equal pixels on x and y).
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">PlotXY.pcolormesh()</span></code> draws a data-coord quad mesh (per-cell colours via a
+polygon <code class="docutils literal notranslate"><span class="pre">PathCollection</span></code>); masked / non-finite cells are skipped, so an
+<code class="docutils literal notranslate"><span class="pre">orix</span></code> pole-density histogram renders natively as an IPF density heatmap. A
+marker group (and <code class="docutils literal notranslate"><span class="pre">pcolormesh</span></code>) accepts a <code class="docutils literal notranslate"><span class="pre">clip_path</span></code> — a data-coord polygon
+the group is clipped to (matplotlib <code class="docutils literal notranslate"><span class="pre">set_clip_path</span></code>), e.g. the curved sector
+boundary so the mesh’s edge cells don’t overflow it.</p></li>
+<li><p>Axis labels, titles, and colorbar labels now accept a <code class="docutils literal notranslate"><span class="pre">fontsize</span></code> keyword
+(<code class="docutils literal notranslate"><span class="pre">set_xlabel(&quot;...&quot;,</span> <span class="pre">fontsize=14)</span></code>), and a new <code class="docutils literal notranslate"><span class="pre">set_tick_label_size()</span></code>
+controls tick-number size. Label strings support a mini-TeX subset inside
+<code class="docutils literal notranslate"><span class="pre">$...$</span></code> — superscripts (<code class="docutils literal notranslate"><span class="pre">$10^{-3}$</span></code>), subscripts (<code class="docutils literal notranslate"><span class="pre">$E_F$</span></code>), Greek
+letters, and common symbols (<code class="docutils literal notranslate"><span class="pre">\times</span></code>, <code class="docutils literal notranslate"><span class="pre">\AA</span></code>, <code class="docutils literal notranslate"><span class="pre">\degree</span></code>) — rendered
+natively on the canvas. Logarithmic tick labels now draw true superscripts.</p>
+<p>Text is never clipped: the 2D title strip grows to fit large or TeX titles,
+the colorbar (strip + label) now reserves real layout space instead of
+overflowing the panel edge, rotated y-labels stay inside their gutter at any
+size, and edge tick labels are nudged inward rather than cut off.</p>
+</li>
+<li><p>Heavy plot geometry now travels on a separate sync channel and is
+re-transmitted only when it actually changes.  <code class="docutils literal notranslate"><span class="pre">Plot2D</span></code> and <code class="docutils literal notranslate"><span class="pre">Plot3D</span></code>
+panels split their large, slow-changing state (vertex/face/image buffers,
+per-point colours, colormap LUTs) into a <code class="docutils literal notranslate"><span class="pre">panel_&lt;id&gt;_geom</span></code> trait keyed by
+a content hash; the light view payload references it by revision and the JS
+renderer splices the cached geometry back in.  Consequently view-only
+updates — <code class="docutils literal notranslate"><span class="pre">set_highlight</span></code>, <code class="docutils literal notranslate"><span class="pre">set_view</span></code>, <code class="docutils literal notranslate"><span class="pre">set_zoom</span></code>, plane-widget drags,
+titles — no longer re-send the panel’s geometry.  Combined with
+<code class="docutils literal notranslate"><span class="pre">Figure.batch()</span></code> coalescing, the voxel grain explorer’s per-crosshair
+wire traffic drops ~65% (1155 -&gt; 400 KB/frame at 192-cubed), the main
+source of Pyodide lag.  Plots that declare no geometry keys (e.g. <code class="docutils literal notranslate"><span class="pre">Plot1D</span></code>)
+keep the prior single-trait behaviour unchanged.</p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">Axes.voxels()</span></code> 3-D geometry renders volumes as shaded translucent
+cubes (per-voxel colours, global <code class="docutils literal notranslate"><span class="pre">alpha</span></code>), and 3-D panels gained their
+first interactive widget: <code class="docutils literal notranslate"><span class="pre">add_widget(&quot;plane&quot;,</span> <span class="pre">axis=...,</span> <span class="pre">position=...)</span></code>
+adds a draggable <code class="xref py py-class docutils literal notranslate"><span class="pre">PlaneWidget</span></code> slice selector — drag it along its
+normal in the browser and <code class="docutils literal notranslate"><span class="pre">pointer_move</span></code>/<code class="docutils literal notranslate"><span class="pre">pointer_up</span></code> callbacks fire in
+Python.  Voxels lying on a plane render more opaque
+(<code class="docutils literal notranslate"><span class="pre">voxel_slice_alpha</span></code>), so selected slices glow inside the volume.  The
+voxel grain explorer example now uses all of this: three plane widgets
+bidirectionally linked with three orthoslice crosshairs and the 3-D IPF.</p></li>
+<li><p>Plots are now usable on touch devices (iPad / iPhone) and trackpads.  A touch
+bridge in the renderer translates gestures into the existing interaction
+handlers, so every panel type and every example becomes touch-capable with no
+API change: one-finger drag pans / orbits / moves a widget, ROI, marker or
+slice plane (whatever is under the finger); two-finger pinch zooms; and
+double-tap fires the panel’s <code class="docutils literal notranslate"><span class="pre">double_click</span></code> event.  Overlay canvases set
+<code class="docutils literal notranslate"><span class="pre">touch-action:</span> <span class="pre">none</span></code> so the browser hands gestures to the plot instead of
+scrolling the page.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">double_click</span></code> event on a 1-D / <code class="xref py py-class docutils literal notranslate"><span class="pre">PlotXY</span></code> panel now reports
+<code class="docutils literal notranslate"><span class="pre">ydata</span></code> alongside <code class="docutils literal notranslate"><span class="pre">xdata</span></code> (data coordinates), matching the 2-D image path —
+so a coordinate axis can be picked in data space (e.g. an IPF / pole-figure mask).</p></li>
+<li><p>Voxel rendering is ~2–3× faster: cubes render once per (colour, emphasis)
+into sprites and are blitted per voxel with typed-array projection and
+integer-snapped draws; camera-static redraws (plane-widget drags) reuse a
+cached projection/depth-sort.  3-D interaction no longer double-draws —
+self-originated model writes skip the panel-listener echo.  New voxel
+benchmarks (<code class="docutils literal notranslate"><span class="pre">test_bench_voxels_orbit</span></code> / <code class="docutils literal notranslate"><span class="pre">_reblit</span></code>) guard the budget
+(~3–6 µs/cube), and <code class="docutils literal notranslate"><span class="pre">voxels()</span></code> warns above ~20k cubes with downsampling
+guidance for large volumes (e.g. 512×512×300 tomograms).  Local docs builds
+now rebuild the Pyodide wheel when sources are newer, so the ⚡ interactive
+mode never runs stale code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Figure.batch()</span></code> coalesces panel pushes: every plot mutation inside the
+<code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">fig.batch():</span></code> block is serialised and transferred at most once per
+panel when the block exits, instead of once per mutation.  Linked-view
+handlers (e.g. the voxel grain explorer’s crosshairs, which touch 5 panels
+per mouse event) drop from ~8 full-state pushes per frame to one per changed
+panel — a large reduction in comm traffic that removes most of the lag under
+Pyodide and remote kernels.  <code class="docutils literal notranslate"><span class="pre">set_highlight</span></code> / <code class="docutils literal notranslate"><span class="pre">set_view</span></code> / <code class="docutils literal notranslate"><span class="pre">set_zoom</span></code>
+on 3-D panels now route through this coalescing path so re-aiming the camera
+or moving the highlight never re-transmits the panel’s (potentially hundreds
+of KB) unchanged geometry.  RGB <code class="docutils literal notranslate"><span class="pre">imshow</span></code> updates also skip the unused
+colormap-LUT rebuild.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imshow</span></code> now renders <code class="docutils literal notranslate"><span class="pre">(H,</span> <span class="pre">W,</span> <span class="pre">3|4)</span></code> arrays as true-colour RGB(A) images
+(previously the extra channels were silently dropped).  <code class="docutils literal notranslate"><span class="pre">scatter3d</span></code> gained
+per-point <code class="docutils literal notranslate"><span class="pre">colors=</span></code> and a <code class="docutils literal notranslate"><span class="pre">bounds=</span></code> override for origin-true geometry
+(e.g. unit vectors on a sphere), <code class="docutils literal notranslate"><span class="pre">Plot3D.set_highlight()</span></code> marks a
+single emphasised point, and <code class="docutils literal notranslate"><span class="pre">Plot3D.set_sphere()</span></code> draws a shaded,
+wireframed reference sphere behind the data (far-side points dimmed).  The 3-D camera is now a proper turntable
+(matplotlib <code class="docutils literal notranslate"><span class="pre">azim</span></code>/<code class="docutils literal notranslate"><span class="pre">elev</span></code> semantics — azimuth spins about the data
+z-axis): the previous camera could not aim at arbitrary directions, which
+blocked rotate-to-face interactions.  A new gallery example,
+<em>Inverse Pole Figure (IPF) Explorer</em>, combines all of these: an IPF-RGB
+orientation map whose crosshair rotates a reduced 3-D IPF sphere to face
+the selected grain’s crystal direction.</p></li>
+<li><p>anyplotlib figures can now be embedded outside Jupyter — e.g. in Electron
+apps, MDI sub-windows, or plain web pages — with no anywidget runtime.
+<code class="docutils literal notranslate"><span class="pre">fig.save_html()</span></code> / <code class="docutils literal notranslate"><span class="pre">fig.to_html()</span></code> export a self-contained interactive
+page; <code class="docutils literal notranslate"><span class="pre">figure_esm.js</span></code> now exports a <code class="docutils literal notranslate"><span class="pre">mount(el,</span> <span class="pre">state,</span> <span class="pre">opts)</span></code> entry point
+for direct JS embedding (with <code class="docutils literal notranslate"><span class="pre">onEvent</span></code> interaction callbacks, live
+<code class="docutils literal notranslate"><span class="pre">setPanelState</span></code> updates, <code class="docutils literal notranslate"><span class="pre">resize</span></code>, and <code class="docutils literal notranslate"><span class="pre">dispose</span></code>); and the new
+<code class="docutils literal notranslate"><span class="pre">anyplotlib.embed</span></code> module provides <code class="docutils literal notranslate"><span class="pre">figure_state()</span></code>, <code class="docutils literal notranslate"><span class="pre">esm_path()</span></code>, and
+a transport-agnostic <code class="docutils literal notranslate"><span class="pre">FigureBridge</span></code> for live two-way Python sync over any
+pipe (WebSocket, IPC, stdio) with full event-callback support.</p></li>
+</ul>
+</section>
+<section id="id62">
+<h3>Bug Fixes<a class="headerlink" href="#id62" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixed 3-D plane-widget drags snapping back instead of moving smoothly.
+<code class="docutils literal notranslate"><span class="pre">Plot3D.to_state_dict()</span></code> now always serialises the live overlay widgets, so
+a view-only push on the same panel (<code class="docutils literal notranslate"><span class="pre">set_highlight</span></code> / <code class="docutils literal notranslate"><span class="pre">set_view</span></code>) no
+longer re-sends a stale plane position and clobbers an in-progress drag.  The
+voxel grain explorer also tracks smooth (float) positions for the highlight
+marker so it glides with the planes instead of jumping by whole voxels.</p></li>
+<li><p>Fixed a 3-D GPU panel breaking — voxels and axes both vanishing after
+rendering correctly — when the WebGPU device throws mid-draw or is lost,
+as Safari’s experimental WebGPU does after working for a while.  The GPU
+path makes the decoration <code class="docutils literal notranslate"><span class="pre">plotCanvas</span></code> transparent and takes GPU-only
+branches, so a mid-draw failure left the frame half-built and only a window
+resize (which forces a full redraw) restored it.  The fallback now disposes
+the GPU panel, restores the opaque background, and re-renders the whole panel
+once on the Canvas2D path in the same frame, so it self-heals without a
+resize.</p></li>
+<li><p>Fixed large voxel volumes (e.g. a 256³ grain explorer) rendering “empty” —
+only the plane widgets and highlight marker visible, with no cubes — in
+WebGPU-enabled browsers such as PyCharm’s embedded JCEF.  The WebGPU voxel
+path draws cubes on a <code class="docutils literal notranslate"><span class="pre">gpuCanvas</span></code> beneath the <code class="docutils literal notranslate"><span class="pre">plotCanvas</span></code> that carries
+the axes/planes/highlight; activating the GPU path cleared the plotCanvas
+bitmap but left its opaque CSS <code class="docutils literal notranslate"><span class="pre">background</span></code>, so the element painted over
+every GPU-drawn voxel.  The plotCanvas background is now set transparent
+while the GPU path is active (and restored on fallback / device loss).  The
+voxel shader itself was verified correct on real hardware (NVIDIA TITAN X via
+native wgpu).  The GPU geometry cache also keys on <code class="docutils literal notranslate"><span class="pre">point_colors_b64</span></code> now,
+so <code class="docutils literal notranslate"><span class="pre">set_point_colors</span></code> recolours voxels live.</p></li>
+<li><p>Fixed the 3-D voxel highlight appearing to “float” or land on random voxels
+in large grain volumes.  <code class="docutils literal notranslate"><span class="pre">Plot3D.set_point_colors</span></code> now accepts <code class="docutils literal notranslate"><span class="pre">voxels</span></code>
+panels (not just <code class="docutils literal notranslate"><span class="pre">scatter</span></code>), so the orthoslice explorer can re-colour voxels
+live.  The voxel grain explorer now renders the voxels that lie <em>on</em> the three
+slice planes (instead of a sparse random subsample of the whole volume), so the
+highlight marker is always anchored on a real cube at the slice intersection.
+The on-plane voxel count is ~3·(N/step)² regardless of N, so this stays fast
+even for a 256³ volume.</p></li>
+<li><p>Interactive (⚡) documentation figures are much smoother under Pyodide.  Each
+user interaction event was dispatched with <code class="docutils literal notranslate"><span class="pre">pyodide.runPythonAsync</span></code> on a
+freshly-built code string, which recompiles Python source every frame
+(~1.2 ms/event in WASM — the dominant per-frame cost on a drag).  The bridge
+now calls a pre-compiled dispatcher proxy directly (~50× faster, ~0.02 ms),
+so panning, orbiting, and dragging widgets / slice planes in the docs keep up
+with the gesture.</p></li>
+</ul>
+</section>
+<section id="id63">
+<h3>Maintenance<a class="headerlink" href="#id63" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Refactored the test suite. Moved to a new directory, combined like
+tests into single files, added a couple new tests and removed some redundant tests. (<a class="reference external" href="https://github.com/CSSFrancis/anyplotlib/pull/11">#11</a>)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="dev/benchmarking.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Benchmarking</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">0.11.0 (2026-10-23)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-and-behaviour-changes">API and Behaviour Changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-features">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-fixes">Bug Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">0.10.1 (2026-09-17)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">0.10.0 (2026-09-14)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">API and Behaviour Changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">New Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">0.9.0 (2026-09-11)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">0.8.0 (2026-08-25)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">API and Behaviour Changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">0.7.3 (2026-08-13)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">New Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">0.7.2 (2026-08-03)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">0.7.1 (2026-08-02)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Bug Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">0.7.0 (2026-07-31)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">New Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">0.6.0 (2026-07-31)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">API and Behaviour Changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">0.5.0 (2026-07-26)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id48">0.4.1 (2026-07-26)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id49">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id50">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id51">0.4.0 (2026-07-18)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b1-2026-07-13">0.3.0b1 (2026-07-13)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">New Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id55">0.2.0 (2026-07-10)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id56">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">Bug Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance">Maintenance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id58">0.1.0 (2026-06-24)</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id59">New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id62">Bug Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id63">Maintenance</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/changelog.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, anyplotlib contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.17.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
